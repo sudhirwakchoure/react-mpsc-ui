@@ -1,0 +1,117 @@
+  .card-header{
+
+    padding: 1px;
+    background-color: #f1f1f1;
+    margin-right: 10px;
+    margin-left: 20%;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #210606;
+    }
+
+  .line{
+      margin-left: 320px;
+      margin-top: 10px;
+      width: 300px;
+  }
+  
+  .left-div{
+    margin-top: 10px;
+  }
+
+  .text-box
+  {
+      margin-top: 20px; 
+      margin-left: 260px;
+      margin-bottom: 4px;
+      display: inline;
+  }
+
+
+  .submit-button{
+    margin-left:380px;
+    align-self: center;
+    display: inline;
+    }
+
+      
+  .v-line {
+    border-left: 1px solid black;
+    height: 30ch    ;
+    margin-top: -70px;
+    margin-left: 650px ;
+  }
+
+  .table-data{
+    margin-top: 10px;
+    margin-left:800px;
+  } 
+
+  .search-box{
+    margin-left: 1050px;
+    margin-top: -244px;
+  }
+
+  table, td, th {
+    padding: 10px;
+    height:20px;
+    text-align: center;
+    display: fixed;
+  }
+
+
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .customers td,th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  .customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .customers tr:hover {background-color: #ddd;} 
+  
+    .customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+  
+
+table{
+  width: 60%;
+}
+
+  .pagination{
+    margin-left: 900px;
+    margin-top: 220px;
+  }
+
+  .error{
+    margin-left: 890px;
+    margin-top: 80px;
+  }
+
+  .error-msg{
+    margin-left: 340px;
+    color: red;
+  }
+
+
+  .buttion-1{
+    background-color: #4285F4;
+    color: #e4e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+  }
+
+  .buttion-1:hover {
+    background-color: #159410;
+  }

@@ -1,0 +1,39 @@
+.breadcrumbs-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 20%;
+  }
+  
+
+  .breadcrumb {
+
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #210606;
+  }
+  
+  .breadcrumbs-container{
+    position: relative;
+    padding: 10px;
+    background-color: #f1f1f1;
+  }
+  .breadcrumbs-container::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f1f1f1 transparent;
+  }  
+  .selected {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+

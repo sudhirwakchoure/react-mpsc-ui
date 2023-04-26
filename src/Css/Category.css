@@ -1,0 +1,197 @@
+  /* .category-header{
+
+    padding: 1px;
+    background-color: #f1f1f1;
+    margin-right: 10px;
+    margin-left: 20%;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #210606;
+    }
+
+  
+  .left-div{
+    margin-top: 12px;
+    margin-left: 60px;
+  }
+  .data{
+    margin-left: 10px;
+  }
+
+  .left-div1{
+    margin-top: 10px;
+    margin-left: 60px;
+  }
+
+  .text-box
+  {
+      margin-top: 20px; 
+      margin-left: 260px;
+      margin-bottom: 4px;
+      display: inline;
+  }
+
+
+  .submit-button{
+    margin-left:380px;
+    align-self: center;
+    display: inline;
+    }
+
+  .horizontalline{
+      margin-left: 310px;
+      margin-top: 10px;
+      width: 300px;
+  }
+      
+  .vertical-line {
+    border-left: 1px solid black;
+    height: 30ch    ;
+    margin-top: -110px;
+    margin-left: 620px ;
+  }
+
+  .table-data{
+    margin-top: -250px;
+    margin-left:800px;
+  } 
+
+
+  table, td, th {
+    padding: 5px;
+    height:10px;
+    text-align: center;
+    display: fixed;
+
+  }
+
+  .pagination{
+    margin-left: 900px;
+    margin-top: 220px;
+  }
+
+  .error{
+    margin-left: 890px;
+    margin-top: 80px;
+  }
+
+  .error-msg{
+    margin-left: 340px;
+    color: red;
+  }
+
+
+  .buttion-1{
+    background-color: #4285F4;
+    color: #e4e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+  }
+
+  .buttion-1:hover {
+    background-color: #159410;
+  } */
+
+  .category-header{
+
+    padding: 1px;
+    background-color: #f1f1f1;
+    margin-right: 10px;
+    margin-left: 20%;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #210606;
+    }
+
+  
+  .left-div{
+    margin-top: 12px;
+    margin-left: 60px;
+  }
+  .data{
+    margin-left: 10px;
+  }
+
+  .left-div1{
+    margin-top: 10px;
+    margin-left: 60px;
+  }
+
+  .text-box
+  {
+      margin-top: 20px; 
+      margin-left: 260px;
+      margin-bottom: 4px;
+      display: inline;
+  }
+
+
+  .submit-button{
+    margin-left:380px;
+    align-self: center;
+    display: inline;
+    }
+
+  .horizontalline{
+      margin-left: 310px;
+      margin-top: 10px;
+      width: 300px;
+  }
+      
+  .vertical-line {
+    border-left: 1px solid black;
+    height: 30ch    ;
+    margin-top: -110px;
+    margin-left: 620px ;
+  }
+
+  .table-data{
+    margin-top: -250px;
+    margin-left:800px;
+  } 
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+  .pagination{
+    margin-left: 900px;
+    margin-top: 220px;
+  }
+
+  .error{
+    margin-left: 890px;
+    margin-top: 80px;
+  }
+
+  .error-msg{
+    margin-left: 340px;
+    color: red;
+  }
+
+
+  .buttion-1{
+    background-color: #4285F4;
+    color: #e4e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+  }
+
+  .buttion-1:hover {
+    background-color: #159410;
+  }

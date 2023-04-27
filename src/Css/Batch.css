@@ -36,9 +36,6 @@ body {
       padding-top: 15px;
       padding-bottom: 10px;
         }
-
-
-
     .section-div
     {
       width: 100%;
@@ -48,7 +45,18 @@ body {
       display: inline-flex;
     } 
 
+   .file{
+        text-align: start;
+        margin-top: -40px;
 
+     }
+
+    .excel,
+    .csv
+    {
+      margin-left: 3px;
+      text-align: start;
+    }
 
 
 
@@ -71,7 +79,7 @@ body {
       border-style: solid;
       border-color: rgb(37, 132, 8); */
       margin-left: 10px;
-      text-align: start;
+      text-align: end;
     }
 
     .section-div-right .serarch-box {
@@ -135,6 +143,9 @@ body {
     background-color: #4921bf;
   }
 
+  .table-data{
+    margin-top: -30px;
+  } 
 
 
 /*

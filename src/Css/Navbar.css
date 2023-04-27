@@ -50,9 +50,23 @@
   }
    */
 
+
+   @import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
+
+   * {margin: 0; padding: 0;}
+   
+   html, body {min-height: 100%;}
+   
+   body {
+     font-family: 'Merriweather Sans', arial, verdana;
+   }
+   
+
    nav {
-    background-color: #130202;
-    color: #110101;
+    background-color: rgb(129, 56, 145);
+    /* background-color: #2409af; */
+
+    /* color: #110101; */
     height: 100rem;
     position: absolute;
     left:0;
@@ -62,21 +76,24 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    font-family: Verdana;
-    font-size: small ;
+    text-align: start;
 
 
   }
   
   nav ul {
     list-style: none;
-    padding: 0;
+    padding: 0px;
     margin: 0;
+    
   }
   
   nav li {
     padding: 10px 0;
     position: relative;
+    font-size: small;
+    /* background-color: rebeccapurple; */
+    
   }
   
   nav a {
@@ -84,17 +101,20 @@
     text-decoration: none;
   }
   
+  nav li ul a{
+    font-size: x-small;
+  }
   nav ul ul {
     position:initial;
     top: 0;
     left: 100%;
     padding: 0px;
     display: none;
-    font-size: small;
   }
   
   nav ul li:hover > ul {
     display: block;
+
   }
   
   nav:before {
@@ -114,10 +134,13 @@
     list-style-type: none;
     padding: 2px 6px;
     border-bottom: 1px solid #f7f5f5;
+
+
   }
 
   .nav li:last-child {
     border-bottom: none;
+
   }
 
   

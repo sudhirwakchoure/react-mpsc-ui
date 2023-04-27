@@ -335,7 +335,8 @@ export default function Batch() {
             </div>
             <div class="v-line"></div>
             <div className="section-div-right">
-            <small>Search</small>              <br/>
+            <small>Search</small>    
+           <br/>
             <input
               type="text"
               className="search-box"
@@ -343,6 +344,15 @@ export default function Batch() {
               onChange={handleSearch}
               placeholder="Search..."
             />
+            <br/>
+            <br/>
+            <div className="file">
+            <button className="pdf">PDF</button>
+            <button className="excel">Excel</button>
+            <button className="csv">CSV </button>
+
+            </div>
+
             <br/>            <br/>
 
             <div class="table-data">

@@ -1,19 +1,143 @@
-  .card-header{
+ @import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
 
-    padding: 1px;
-    background-color: #f1f1f1;
-    margin-right: 10px;
+* {margin: 0; padding: 0;}
+
+html, body {min-height: 100%;}
+
+body {
+	padding-top: 4px;
+	background: #e2ece5;
+	background: linear-gradient(#e2ece5, #e2ece5); 
+	font-family: 'Merriweather Sans', arial, verdana;
+  text-decoration-color: #171716;
+}
+
+  
+  .card-header{
+    background-color: #fefafa;
     margin-left: 20%;
+    padding-left: 2px;
+    padding-right: 15px;
+     margin-right: 15px;
+    padding-top: 2px;
     margin-top: 10px;
-    cursor: pointer;
-    color: #210606;
+    text-align: start;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(158, 10, 10);
+    height: 30ch;
+
+
+    /* margin-bottom: 24px; */
     }
 
-  .line{
-      margin-left: 320px;
-      margin-top: 10px;
+   .title{
+      color: rgb(8, 8, 8);
+      padding-top: 15px;
+      padding-bottom: 10px;
+        }
+
+
+
+    .section-div
+    {
+      width: 100%;
+      border-width: 2px;
+      /* border-style: solid;
+      border-color: rgb(34, 46, 204); */
+      display: inline-flex;
+    } 
+
+
+
+
+
+
+    .section-div-left{
+      width: 57%;
+      height: 100%;
+      margin-left: 5px;
+      margin-top: 20px;
+      /* border-width: 2px;
+      border-style: solid;
+      border-color: rgb(37, 132, 8);
+       */
+    }
+
+    .section-div-right{
+      width: 100%;
+      height: 100%;
+      /* border-width: 2px;
+      border-style: solid;
+      border-color: rgb(37, 132, 8); */
+      margin-left: 10px;
+      text-align: start;
+    }
+
+    .section-div-right .serarch-box {
+      margin-right: 80px;
+    }
+
+
+
+    .v-line {
+      border-left: 1px solid #171716;
+    }
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      text-align: center;
+    }    
+    th, td {
+      padding: 2px;
+      text-align: center;
+      border:1px solid black;
+    }
+    th:first-child {
+      width: 100px;
+    }
+    
+    th:nth-child(2),
+    td:nth-child(2) {
       width: 300px;
+    }
+    
+    th:last-child,
+    td:last-child {
+      width: 200px;
+    }
+  
+
+    .submiterror,
+    .important,
+    .error
+    {
+      color: red;
+    }
+
+  
+
+  .line{
+      width: 97%;
+      margin-top: 5px;
   }
+
+  .buttion-1{
+    cursor: pointer;
+    color: #121412;
+    margin-left: 40%;
+    margin-top: 5px;
+  }
+
+  .buttion-1:hover {
+    background-color: #4921bf;
+  }
+
+
+
+/*
   
   .left-div{
     margin-top: 10px;
@@ -22,14 +146,13 @@
   .text-box
   {
       margin-top: 20px; 
-      margin-left: 260px;
-      margin-bottom: 4px;
+      margin-left: -330px;
       display: inline;
   }
 
 
   .submit-button{
-    margin-left:380px;
+    margin-left:-380px;
     align-self: center;
     display: inline;
     }
@@ -43,7 +166,7 @@
   }
 
   .table-data{
-    margin-top: 10px;
+    margin-top: 0px;
     margin-left:800px;
   } 
 
@@ -60,28 +183,6 @@
   }
 
 
-  #customers {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .customers td,th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-
-  .customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  .customers tr:hover {background-color: #ddd;} 
-  
-    .customers th {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: left;
-      background-color: #04AA6D;
-      color: white;
-    }
   
 
 table{
@@ -93,13 +194,10 @@ table{
     margin-top: 220px;
   }
 
-  .error{
-    margin-left: 890px;
-    margin-top: 80px;
-  }
 
   .error-msg{
-    margin-left: 340px;
+    margin-left: -450px;
+    margin-top: -200px;
     color: red;
   }
 
@@ -114,4 +212,4 @@ table{
 
   .buttion-1:hover {
     background-color: #159410;
-  }
+  } */

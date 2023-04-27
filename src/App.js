@@ -1,11 +1,12 @@
 import React from 'react';
-import Category from './Pages/Category';
+import Breadcrumfalt from './Pages/Breadcrumfalt';
 import Navbar from './Components/Navbar';
 import Batch from './Pages/Batch';
+// import Breadcrum from './Components/Breadcrum';
 function App() {
   return (
     <div>
-      {/* <Navbar/> */}
+      <Navbar/>
       <Batch/>
       </div>
   );

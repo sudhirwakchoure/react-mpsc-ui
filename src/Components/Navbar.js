@@ -45,7 +45,7 @@ function Navbar() {
                     </a>   
                   </li>
                   <li className="sublist-item">
-                    <Link to="/service2" className="sublist-link">
+                    <Link to="/catagory" className="sublist-link">
                     &#x2666;&nbsp;&nbsp;Categories
                     </Link>
                   </li>

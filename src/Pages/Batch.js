@@ -197,9 +197,6 @@
 //   );
 // }
 
-
-
-
 import React, { useState } from "react";
 import "../Css/Batch.css";
 import Breadcrumfalt from "./Breadcrumfalt";
@@ -311,7 +308,7 @@ export default function Batch() {
       <div class="card-header">
         <form onSubmit={handleSubmit}>
           <div className="title">
-            <strong class=" ">Section Details</strong>
+            <strong class="heding title ">Section Details</strong>
           </div>
 
           <hr></hr>
@@ -319,7 +316,8 @@ export default function Batch() {
           <div class="section-div">
             <div className="section-div-left">
               <div class="text-box">
-                <small>Section Name</small><spam className="important">&nbsp;*</spam> :&nbsp;&nbsp;
+                <small>Section Name</small>
+                <spam className="important">&nbsp;*</spam> :&nbsp;&nbsp;
                 <input
                   type="text"
                   value={inputData}
@@ -335,73 +333,69 @@ export default function Batch() {
             </div>
             <div class="v-line"></div>
             <div className="section-div-right">
-            <small>Search</small>    
-           <br/>
-            <input
-              type="text"
-              className="search-box"
-              value={searchInput}
-              onChange={handleSearch}
-              placeholder="Search..."
-            />
-            <br/>
-            <br/>
-            <div className="file">
-            <button className="pdf">PDF</button>
-            <button className="excel">Excel</button>
-            <button className="csv">CSV </button>
-
-            </div>
-
-            <br/>            <br/>
-
-            <div class="table-data">
-              <table
-                class="sectiontable"
-                style={{
-                  display: filteredData.length === 0 ? "none" : "block",
-                }}
-              >
-                <thead>
-                  <tr>
-                    <th>SrNo</th>
-                    <th>Data</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>{tableRows}</tbody>
-              </table>
-            </div>
-
-            {filteredData.length === 0 && (
-              <p className="error">No data found</p>
-            )}
-
-            <div class="pagination">
-              <button
-                onClick={() => handlePageChange("prev")}
-                disabled={currentPage === 1}
-              >
-                Prev
-              </button>
-              {pageNumbers.map((number) => (
-                <button
-                  key={number}
-                  onClick={() => setCurrentPage(number)}
-                  disabled={currentPage === number}
+              <small>Search</small>
+              <br />
+              <input
+                type="text"
+                className="search-box"
+                value={searchInput}
+                onChange={handleSearch}
+                placeholder="Search..."
+              />
+              <br />
+              <br />
+              <div className="file">
+                <button className="pdf">PDF</button>
+                <button className="excel">Excel</button>
+                <button className="csv">CSV </button>
+              </div>
+              <br /> <br />
+              <div class="table-data">
+                <table
+                  class="sectiontable"
+                  style={{
+                    display: filteredData.length === 0 ? "none" : "block",
+                  }}
                 >
-                  {number}
+                  <thead>
+                    <tr>
+                      <th>SrNo</th>
+                      <th>Data</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>{tableRows}</tbody>
+                </table>
+              </div>
+              {filteredData.length === 0 && (
+                <p className="error">No data found</p>
+              )}
+              <div class="pagination">
+                <button
+                  onClick={() => handlePageChange("prev")}
+                  disabled={currentPage === 1}
+                >
+                  Prev
                 </button>
-              ))}
-              <button
-                onClick={() => handlePageChange("next")}
-                disabled={currentPage === Math.ceil(data.length / itemsPerPage)}
-              >
-                Next
-              </button>
+                {pageNumbers.map((number) => (
+                  <button
+                    key={number}
+                    onClick={() => setCurrentPage(number)}
+                    disabled={currentPage === number}
+                  >
+                    {number}
+                  </button>
+                ))}
+                <button
+                  onClick={() => handlePageChange("next")}
+                  disabled={
+                    currentPage === Math.ceil(data.length / itemsPerPage)
+                  }
+                >
+                  Next
+                </button>
+              </div>
             </div>
-          </div>
-
           </div>
         </form>
       </div>

@@ -31,10 +31,10 @@ function Navbar() {
 
                 
               <li className="nav-item">
-                <a href="/src/Pages/Batch.js" className="nav-link">
+                <a href="/Batch" className="nav-link">
                   <FaAnchor/>&nbsp;&nbsp;Batch&nbsp;&nbsp;<FaCaretDown/> 
                 </a>
-                <ul className="sublist">
+                {/* <ul className="sublist">
                   <li className="sublist-item">
                    <a>
                     
@@ -60,7 +60,7 @@ function Navbar() {
                     </Link>
                   </li>
 
-                </ul>
+                </ul> */}
               </li>
 
               <li className="nav-item">

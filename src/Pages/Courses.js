@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import "../Css/Category.css";
-import Breadcrumfalt from "../Pages/Breadcrumfalt";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import * as FileSaver from "file-saver";
 import * as XLSX from "xlsx";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
+import"../Css/Course.css";
+import Breadcrumfalt from "./Breadcrumfalt";
 
 export default function Category() {
   const [data, setData] = useState([]);
   const [inputData, setInputData] = useState("");
   const [inputCategory, setInputCategory] = useState("");
+  const [inputCourse, setInputCourse] = useState("");
+
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(5);
   const [error, setError] = useState("");
@@ -23,14 +25,18 @@ export default function Category() {
   // Handle submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputData.trim() === "" || inputCategory.trim() === "") {
+    if (inputData.trim() === "" || inputCategory.trim() === ""|| inputCourse.trim() === "") {
       setError("Please enter a valid input");
       return;
     }
     if (isEditing) {
       const newData = data.map((d) =>
         d.srNo === selectedItem.srNo
-          ? { srNo: d.srNo, data: inputData, category: inputCategory }
+          ? { srNo: d.srNo, 
+            data: inputData,
+             category: inputCategory,
+             course:inputCourse
+             }
           : d
       );
       setData(newData);
@@ -39,11 +45,17 @@ export default function Category() {
     } else {
       setData([
         ...data,
-        { srNo: data.length + 1, data: inputData, category: inputCategory },
+        { srNo: data.length + 1,
+           data: inputData,
+            category: inputCategory,
+            course:inputCourse
+
+           },
       ]);
     }
     setInputData("");
     setInputCategory("");
+    setInputCourse("");
     setError("");
   };
 
@@ -57,7 +69,9 @@ export default function Category() {
   const filteredData = data.filter(
     (item) =>
       item.data.toLowerCase().includes(searchInput.toLowerCase()) ||
-      item.category.toLowerCase().includes(searchInput.toLowerCase())
+      item.category.toLowerCase().includes(searchInput.toLowerCase()) ||
+      item.course.toLowerCase().includes(searchInput.toLowerCase())
+
   );
 
   const handlePageChange = (type) => {
@@ -80,7 +94,9 @@ export default function Category() {
       <td>{item.srNo}</td>
       <td>
         {selectedItem && selectedItem.srNo === item.srNo ? (
-          <inputData value={inputData} />
+          <inputData value={inputData} 
+          onChange={(e) => setInputData(e.target.value)}
+          />
         ) : (
           item.data
         )}
@@ -93,6 +109,16 @@ export default function Category() {
           />
         ) : (
           item.category
+        )}
+      </td>
+      <td>
+        {selectedItem && selectedItem.srNo === item.srNo ? (
+          <inputCourse
+            value={inputCourse}
+            onChange={(e) => setInputCourse(e.target.value)}
+          />
+        ) : (
+          item.course
         )}
       </td>
 
@@ -110,8 +136,10 @@ export default function Category() {
   const handleEdit = (item) => {
     setIsEditing(true);
     setSelectedItem(item);
-    setInputCategory(item.category);
     setInputData(item.data);
+    setInputCategory(item.category);
+    setInputCourse(item.course);
+
   };
 
   const handleDelete = (item) => {
@@ -121,6 +149,7 @@ export default function Category() {
         srNo: index + 1,
         data: d.data,
         category: d.category,
+        course:d.course
       }))
     );
   };
@@ -133,9 +162,9 @@ export default function Category() {
   // pdf
   const pdf = () => {
     const doc = new jsPDF();
-    const formattedData = data.map((item) => [item.srNo, item.data,item.category]);
+    const formattedData = data.map((item) => [item.srNo, item.data,item.category,item.course]);
     doc.autoTable({
-      head: [["Sr No.", "Data", "Category"]],
+      head: [["Sr No.", "Data", "Category","Course"]],
       body: formattedData,
     });
     doc.save("batch_data.pdf");
@@ -147,9 +176,9 @@ export default function Category() {
       "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8";
     const fileExtension = ".xlsx";
     const fileName = "batch_data";
-    const formattedData = data.map((item) => [item.srNo, item.data,item.category]);
+    const formattedData = data.map((item) => [item.srNo, item.data,item.category,item.course]);
     const ws = XLSX.utils.aoa_to_sheet([
-      ["Sr No.", "Data", "Category"],
+      ["Sr No.", "Data", "Category","Course"],
       ...formattedData,
     ]);
     const wb = XLSX.utils.book_new();
@@ -164,9 +193,9 @@ export default function Category() {
     const fileType = "text/csv;charset=UTF-8";
     const fileExtension = ".csv";
     const fileName = "batch_data";
-    const formattedData = data.map((item) => [item.srNo, item.data,item.category]);
+    const formattedData = data.map((item) => [item.srNo, item.data,item.category,item.course]);
     const csvData = [
-      ["Sr No.", "Data", "Category"],
+      ["Sr No.", "Data", "Category","Course"],
       ...formattedData.map((item) => item.join(",")),
     ].join("\n");
     const blob = new Blob([csvData], { type: fileType });
@@ -175,10 +204,10 @@ export default function Category() {
 
   return (
     <div>
-      <Breadcrumfalt />
+      <Breadcrumfalt/>
       <div class="card-header-category">
         <div className="category-title">
-          <strong class="heding title ">Category Details</strong>
+          <strong class="heding title ">Courses Details</strong>
         </div>
         <hr></hr>
 
@@ -198,11 +227,22 @@ export default function Category() {
             <spam className="important">&nbsp;*</spam> :&nbsp;&nbsp;
             <input
               className="textbox2"
-              placeholder="Category Name..."
+              placeholder="----Category Name----"
               type="text"
               value={inputCategory}
               onChange={(e) => setInputCategory(e.target.value)}
             />
+            <br />
+            <small>Course Name</small>
+            <spam className="important">&nbsp;*</spam> :&nbsp;&nbsp;
+            <input
+              className="textbox3"
+              placeholder="Course Name..."
+              type="text"
+              value={inputCourse}
+              onChange={(e) => setInputCourse(e.target.value)}
+            />
+
             <hr className="line"></hr>
             {/* <button class="buttion-1" type="submit">
                 Submit
@@ -250,6 +290,7 @@ export default function Category() {
                     <th>SrNo</th>
                     <th>Data</th>
                     <th>Category</th>
+                    <th>Course</th>
                     <th>Action</th>
                   </tr>
                 </thead>

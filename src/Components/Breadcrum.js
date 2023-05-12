@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../Css/Breadcrum.css";
+import { Link } from 'react-router-dom';
+
 
 export default function Breadcrum() {
     const [selected, setSelected] = useState(0);
@@ -11,10 +13,12 @@ export default function Breadcrum() {
       <div>
       <div className="breadcrumbs-container">
         <div
+
           className={`breadcrumb ${selected === 0 ? 'selected' : ''}`}
           onClick={() => handleSelect(0)}
         >
-          Add Batch
+          <Link to="/Batch" className="nav-link">
+          Add Batch</Link>
         </div>
         <div
           className={`breadcrumb ${selected === 1 ? 'selected' : ''}`}
